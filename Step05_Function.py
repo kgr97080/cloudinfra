@@ -10,3 +10,54 @@
     - call 했던 위치로 돌아오면서 어떤 data를 반드시 가져온다
 
 """
+
+def test1():
+    print("test1()호출됨")
+
+test1()
+result1 = test1()
+
+# 매개변수가 선언어 있는 함수
+# 매개변수에 대입할 값을 전달해야지 호출할 수가 있다
+# 매개변수의 이름은 마음대로 지울 수 있다 
+
+
+
+def test2(arg):
+    print("전달 받은 내용:", arg)
+    print(f"전달 받은 내용: {arg} ")
+
+test2(None)
+test2(10)
+test2("kim")
+
+# 값(숫자)을 2개 전달 받아서 전달 받은 두수의 합을 출력하는 함수
+# : 다음에 type hint를 작성할수도 있다 
+#hint 일뿐 문법적으로 강제하지는 않는다
+
+def print_sum(num1: int, num2: int):
+    sum = num1+num2
+    print(f"{num1} + {num2} = {sum}")
+
+print_sum("lee", "park")
+print_sum(10,20)
+print_sum(30,40)
+
+# 문자열 type을 2개 전달 받는 함수
+def print_info(name: str, add: str):
+    print(f" 이름은 {name} 이고 주소는 {addr}")
+
+
+
+print_info("김구라","노량진")
+# keyword을 이용해서 인자(argument)를 전달할 수도 있다 
+print_info(addr="행신동", name="해골")
+
+# 어떤 값을 명시적으로 리턴해주는 함수 
+def get_sum(num1: int, num2: int):
+    sum=num1+num2
+    return sum
+
+result2 = get_sum(10,20)
+
+print("종료 됩니다")
